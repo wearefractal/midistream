@@ -1,0 +1,9 @@
+{
+  "header": "MThd",
+  "chunkSize": 6,
+  "supportedFormats": [1,2],
+  "timeDivisions": {
+    "0": "tpb",
+    "1": "fps"
+  }
+}

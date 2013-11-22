@@ -1,0 +1,30 @@
+{
+   "name":"midistream",
+   "description":"Streaming MIDI file parser",
+   "version":"0.0.1",
+   "homepage":"http://github.com/wearefractal/midistream",
+   "repository":"git://github.com/wearefractal/midistream.git",
+   "author":"Fractal <contact@wearefractal.com> (http://wearefractal.com/)",
+   "main":"./index.js",
+   
+   "dependencies":{
+      "event-stream":"*",
+      "binary":"*"
+   },
+   "devDependencies":{
+      "mocha":"*",
+      "should":"*"
+   },
+   "scripts":{
+      "test":"mocha"
+   },
+   "engines":{
+      "node":">= 0.4.0"
+   },
+   "licenses":[
+      {
+         "type":"MIT",
+         "url":"http://github.com/wearefractal/midistream/raw/master/LICENSE"
+      }
+   ]
+}
