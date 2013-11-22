@@ -21,7 +21,16 @@
 ## Usage
 
 ```javascript
-EXAMPLEHERE
+var fs = require('fs');
+var midistream = require('midistream');
+
+// create a parse stream
+var parser = midistream.createStream();
+var chopin = fs.createReadStream('chopin-nocturne-op9-num2.mid');
+
+chopin.pipe(parser);
+
+// usage info on what events are emitted and data that is available inbound
 ```
 
 ## Examples
