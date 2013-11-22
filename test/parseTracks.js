@@ -22,12 +22,13 @@ describe('parseTracks()', function() {
 
     parser.tap(function(vars){
       should.exist(vars.tracks, 'should have created tracks');
-      console.log(vars);
       should.exist(vars.tracks["1"], 'should have created track 1');
       should.exist(vars.tracks["2"], 'should have created track 2');
       should.exist(vars.tracks["3"], 'should have created track 3');
       should.exist(vars.tracks["4"], 'should have created track 4');
       should.exist(vars.tracks["5"], 'should have created track 5');
+
+      console.log(vars);
       done();
     });
 
