@@ -9,7 +9,8 @@
    
    "dependencies":{
       "event-stream":"*",
-      "binary":"*"
+      "binary":"*",
+      "async":"*"
    },
    "devDependencies":{
       "mocha":"*",
