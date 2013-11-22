@@ -17,14 +17,13 @@ describe('parseHeader()', function() {
       header: 'MThd',
       chunkSize: 6,
       format: 1,
-      tracks: 5,
+      trackCount: 5,
       timeDivisionType: 'tpb',
       timeDivision: 48
     };
 
     var parser = binary();
     parser.once('error', done);
-    chopin.pipe(parser);
 
     var returnVal = parseHeader(parser);
     should.exist(returnVal, 'should be chainable');
@@ -34,12 +33,14 @@ describe('parseHeader()', function() {
       should.exist(vars.header, 'should parse out header');
       should.exist(vars.chunkSize, 'should parse out chunkSize');
       should.exist(vars.format, 'should parse out format');
-      should.exist(vars.tracks, 'should parse out tracks');
+      should.exist(vars.trackCount, 'should parse out trackCount');
       should.exist(vars.timeDivisionType, 'should parse out timeDivisionType');
       should.exist(vars.timeDivision, 'should parse out timeDivision');
 
       vars.should.eql(expected);
       done();
     });
+
+    chopin.pipe(parser);
   });
 });

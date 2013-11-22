@@ -5,5 +5,9 @@
   "timeDivisions": {
     "0": "tpb",
     "1": "fps"
+  },
+
+  "tracks":{
+    "header": "MTrk"
   }
 }
