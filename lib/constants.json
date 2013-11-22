@@ -11,7 +11,18 @@
     "header": "MTrk"
   },
 
-  "events": {
-    
+  "eventTypes": {
+    "8": "channel",
+    "9": "channel",
+    "10": "channel",
+    "11": "channel",
+    "12": "channel",
+    "13": "channel",
+    "14": "channel",
+
+    "255": "meta",
+
+    "240": "sysex",
+    "247": "specialSysex"
   }
 }
