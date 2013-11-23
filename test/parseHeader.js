@@ -1,6 +1,6 @@
 var path = require('path');
 var fs = require('fs');
-var binary = require('binary');
+var Dissolve = require('dissolve');
 
 var should = require('should');
 require('mocha');
@@ -22,22 +22,22 @@ describe('parseHeader()', function() {
       timeDivision: 48
     };
 
-    var parser = binary();
+    var parser = Dissolve();
     parser.once('error', done);
 
     var returnVal = parseHeader(parser);
     should.exist(returnVal, 'should be chainable');
 
-    parser.tap(function(vars){
-      should.exist(vars, 'should have values');
-      should.exist(vars.header, 'should parse out header');
-      should.exist(vars.chunkSize, 'should parse out chunkSize');
-      should.exist(vars.format, 'should parse out format');
-      should.exist(vars.trackCount, 'should parse out trackCount');
-      should.exist(vars.timeDivisionType, 'should parse out timeDivisionType');
-      should.exist(vars.timeDivision, 'should parse out timeDivision');
+    parser.tap(function(){
+      should.exist(this.vars, 'should have values');
+      should.exist(this.vars.header, 'should parse out header');
+      should.exist(this.vars.chunkSize, 'should parse out chunkSize');
+      should.exist(this.vars.format, 'should parse out format');
+      should.exist(this.vars.trackCount, 'should parse out trackCount');
+      should.exist(this.vars.timeDivisionType, 'should parse out timeDivisionType');
+      should.exist(this.vars.timeDivision, 'should parse out timeDivision');
 
-      vars.should.eql(expected);
+      expected.should.eql(this.vars, 'final result');
       done();
     });
 

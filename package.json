@@ -9,7 +9,7 @@
    
    "dependencies":{
       "event-stream":"*",
-      "binary":"*",
+      "dissolve":"*",
       "async":"*"
    },
    "devDependencies":{
