@@ -8,7 +8,7 @@ require('mocha');
 var parseHeader = require('../lib/parseHeader');
 var constants = require('../lib/constants');
 
-var chopinPath = path.join(__dirname, './fixtures/chopin.mid');
+var chopinPath = path.join(__dirname, './fixtures/minute_waltz.mid');
 var chopin = fs.createReadStream(chopinPath);
 
 describe('parseHeader()', function() {
@@ -19,9 +19,9 @@ describe('parseHeader()', function() {
       header: 'MThd',
       chunkSize: 6,
       format: 1,
-      trackCount: 5,
+      trackCount: 3,
       timeDivisionType: 'tpb',
-      timeDivision: 48
+      timeDivision: 192
     };
 
     var parser = Dissolve();

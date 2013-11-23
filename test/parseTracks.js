@@ -9,7 +9,7 @@ var parseHeader = require('../lib/parseHeader');
 var parseTracks = require('../lib/parseTracks');
 var constants = require('../lib/constants');
 
-var chopinPath = path.join(__dirname, './fixtures/chopin.mid');
+var chopinPath = path.join(__dirname, './fixtures/minute_waltz.mid');
 var chopin = fs.createReadStream(chopinPath);
 
 describe('parseTracks()', function() {
@@ -27,8 +27,6 @@ describe('parseTracks()', function() {
       should.exist(this.vars.tracks[0], 'should have created track 0');
       should.exist(this.vars.tracks[1], 'should have created track 1');
       should.exist(this.vars.tracks[2], 'should have created track 2');
-      should.exist(this.vars.tracks[3], 'should have created track 3');
-      should.exist(this.vars.tracks[4], 'should have created track 4');
 
       console.log(this.vars.tracks[0]);
       done();

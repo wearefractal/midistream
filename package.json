@@ -6,6 +6,7 @@
    "repository":"git://github.com/wearefractal/midistream.git",
    "author":"Fractal <contact@wearefractal.com> (http://wearefractal.com/)",
    "main":"./index.js",
+   "tags":["midi","parser","streaming","music","instrument"],
    
    "dependencies":{
       "event-stream":"*",
