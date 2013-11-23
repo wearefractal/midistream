@@ -12,6 +12,8 @@ var chopinPath = path.join(__dirname, './fixtures/chopin.mid');
 var chopin = fs.createReadStream(chopinPath);
 
 describe('parseHeader()', function() {
+  this.timeout(10000);
+  
   it('should parse a MIDI header correctly', function(done) {
     var expected = {
       header: 'MThd',

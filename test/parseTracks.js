@@ -13,6 +13,8 @@ var chopinPath = path.join(__dirname, './fixtures/chopin.mid');
 var chopin = fs.createReadStream(chopinPath);
 
 describe('parseTracks()', function() {
+  this.timeout(10000);
+  
   it('should parse a MIDI track set correctly', function(done) {
     var parser = Dissolve();
     parser.once('error', done);
