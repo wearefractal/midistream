@@ -30,7 +30,7 @@ describe('parseTracks()', function() {
       should.exist(this.vars.tracks[1], 'should have created track 1');
       should.exist(this.vars.tracks[2], 'should have created track 2');
 
-      console.log(this.vars.tracks[0]);
+      // TODO: actually test this lol
       done();
     });
 

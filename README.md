@@ -28,6 +28,18 @@ var midistream = require('midistream');
 var parser = midistream.createStream();
 var chopin = fs.createReadStream('chopin-nocturne-op9-num2.mid');
 
+// you can listen to events that are emitted as the file is parsed
+parser.on('track', function(){
+  console.log(track.events);  
+});
+
+// or just wait for the entire file to parse
+// totally non-standard event name fail
+parser.on('done', function(file){
+  console.log(file.trackCount);
+  console.log(file.tracks[0].events[0]);
+});
+
 chopin.pipe(parser);
 
 // usage info on what events are emitted and data that is available inbound
