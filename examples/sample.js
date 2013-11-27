@@ -9,7 +9,7 @@ var parser = midistream.createStream();
 var chopin = fs.createReadStream(midiFile);
 
 parser.on('done', function(file){
-  console.dir(file);
+  console.dir(file.tracks[0]);
 });
 
 chopin.pipe(parser);

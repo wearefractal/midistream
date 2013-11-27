@@ -1,7 +1,7 @@
 {
    "name":"midistream",
    "description":"Streaming MIDI file parser",
-   "version":"0.0.1",
+   "version":"0.1.0",
    "homepage":"http://github.com/wearefractal/midistream",
    "repository":"git://github.com/wearefractal/midistream.git",
    "author":"Fractal <contact@wearefractal.com> (http://wearefractal.com/)",

@@ -23,7 +23,9 @@ describe('parseTracks()', function() {
     parseTracks(parser);
 
     parser.tap(function(){
-      console.log(this.vars);
+      console.log(this.vars.tracks[1].events.filter(function(v){
+        return v.eventType == 'channel';
+      }));
 
       should.exist(this.vars.tracks, 'should have created tracks');
       should.exist(this.vars.tracks[0], 'should have created track 0');
